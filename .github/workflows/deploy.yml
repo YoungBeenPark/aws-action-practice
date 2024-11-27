@@ -3,3 +3,11 @@ name: Github Actions 실행 시켜보기
 on:
   push:
     branches: -main
+
+    jops:
+      My-Deploy-Jop:
+        runs-on: ubuntu-latest
+
+        steps:
+          - uses: Hello world 출력하기
+            run: echo "Hello world"

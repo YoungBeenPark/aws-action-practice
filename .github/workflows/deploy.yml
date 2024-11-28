@@ -28,7 +28,10 @@ jobs:
       - name: S3 기존 파일 삭제
         run:
          aws s3 rm s3://aws-practice-cicd --recursive
-         
+
       - name: S3에 빌드된 파일 업로드
         run:
           aws s3 cp ./dist s3://aws-practice-cicd/ --recursive
+      
+      - name: CloudFront 캐시 갱신
+        run: aws cloudFront create-invalidation --distribution-id E1KKC6TJTDGGEH --paths "/*"

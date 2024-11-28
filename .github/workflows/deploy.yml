@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: GitHub Repository 파일 불러오기
         uses: actions/checkout@v4
+
+      - name: git레포지토리 파일 출력하기
+        run: ls

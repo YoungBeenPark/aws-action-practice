@@ -34,4 +34,4 @@ jobs:
           aws s3 cp ./dist s3://aws-practice-cicd/ --recursive
       
       - name: CloudFront 캐시 갱신
-        run: aws CloudFront create-invalidation --distribution-id E1KKC6TJTDGGEH --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E1KKC6TJTDGGEH --paths "/*"
